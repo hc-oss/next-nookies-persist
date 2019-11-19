@@ -48,7 +48,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <NookiesProvider initialValue={pageProps.nookies}> <!--👈-->
+      <NookiesProvider initialValue={pageProps.nookies}> // 👈
         <Component {...pageProps} />
       </NookiesProvider>
     );
@@ -81,7 +81,7 @@ export default Home;
 ## 🤠 Credits
 
 - [Nookies](https://github.com/maticzav/nookies)
-- [Microbundle](https://github.com/developit/microbundle)
+- [Rollup](https://github.com/rollup/rollup)
 - [TypeScript](https://github.com/microsoft/TypeScript)
 
 ## 🙏 Contribute
