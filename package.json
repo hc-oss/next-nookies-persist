@@ -1,6 +1,6 @@
 {
   "name": "next-nookies-persist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Next.js persist cookie data with hooks",
   "author": "harshzalavadiya",
   "license": "MIT",
@@ -16,6 +16,20 @@
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
+  "keywords": [
+    "cookie",
+    "cookies",
+    "next",
+    "nextjs",
+    "js",
+    "persist",
+    "store",
+    "auth",
+    "destory",
+    "parse",
+    "create",
+    "nookies"
+  ],
   "dependencies": {
     "nookies": "^2.0.8"
   },
