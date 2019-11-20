@@ -69,7 +69,7 @@ const Home = () => {
   return (
     <div>
       <pre>{JSON.stringify(nookies, null, 2)}</pre>
-      <button onClick={setNookie("foo", { bar: "baz" })}>Set</button>
+      <button onClick={() => setNookie("foo", { bar: "baz" })}>Set</button>
       <button onClick={() => clearNookie("foo")}>Clear</button>
     </div>
   );
