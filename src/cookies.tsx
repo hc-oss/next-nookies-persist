@@ -1,4 +1,6 @@
-import { destroyCookie, setCookie as set } from "nookies";
+import { destroyCookie as destroy, setCookie as set } from "nookies";
+
+import { NK } from "./static";
 
 /**
  * sets cookie but does not update store can be used server side
@@ -7,19 +9,24 @@ import { destroyCookie, setCookie as set } from "nookies";
  * @param {*} value
  * @param {number} maxAge
  * @param {string} path
- * @param {*} ctx
+ * @param {*} [ctx={}]
  */
-const setCookie = (
+export const setCookie = (
   key: string,
   value: any,
-  maxAge: number,
-  path: string,
-  ctx: any
-) => {
+  maxAge: number = NK.MAX_AGE,
+  path: string = NK.PATH,
+  ctx: any = {}
+) =>
   set(ctx, key, JSON.stringify(value), {
     maxAge,
     path
   });
-};
 
-export { setCookie, destroyCookie };
+/**
+ * Removes cookie by name can be used on server side
+ *
+ * @param {string} key
+ * @param {*} [ctx={}]
+ */
+export const destroyCookie = (key: string, ctx: any = {}) => destroy(key, ctx);

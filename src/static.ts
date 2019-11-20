@@ -7,7 +7,7 @@ export const NK = {
 export interface IStorage {
   nookies;
   setNookie;
-  clearNookie;
+  removeNookie;
 }
 
 export interface INookiesProvider {

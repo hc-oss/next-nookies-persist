@@ -4,7 +4,7 @@ A simple easy to digest key-value based storage module wrapper for Next.js based
 
 [![Edit next-nookies-persist-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/next-nookies-persist-example-l5sp2?fontsize=14&hidenavigation=1&theme=dark)
 
-![GitHub Actions Status](https://github.com/harshzalavadiya/next-nookies-persist/workflows/NodeJS/badge.svg)
+[![GitHub Actions Status](https://github.com/harshzalavadiya/next-nookies-persist/workflows/NodeJS/badge.svg)](https://github.com/harshzalavadiya/next-nookies-persist/actions)
 [![NPM](https://img.shields.io/npm/v/next-nookies-persist.svg)](https://npm.im/next-nookies-persist)
 [![gzip](https://badgen.net/bundlephobia/minzip/next-nookies-persist)](https://bundlephobia.com/result?p=next-nookies-persist)
 
@@ -13,6 +13,7 @@ A simple easy to digest key-value based storage module wrapper for Next.js based
 ## ⚡ Features
 
 - SSR Ready
+- Store JSON Out of the box
 - Lightweight
 - Typed with TypeScript (works with JavaScript too)
 
@@ -64,13 +65,13 @@ import React from "react";
 import useStorage from "next-nookies-persist";
 
 const Home = () => {
-  const { nookies, setNookie, clearNookie } = useStorage();
+  const { nookies, setNookie, removeNookie } = useStorage();
 
   return (
     <div>
       <pre>{JSON.stringify(nookies, null, 2)}</pre>
       <button onClick={() => setNookie("foo", { bar: "baz" })}>Set</button>
-      <button onClick={() => clearNookie("foo")}>Clear</button>
+      <button onClick={() => removeNookie("foo")}>Clear</button>
     </div>
   );
 };
@@ -84,7 +85,7 @@ export default Home;
 - [Rollup](https://github.com/rollup/rollup)
 - [TypeScript](https://github.com/microsoft/TypeScript)
 
-## 🙏 Contribute
+## 🙏 Contributing
 
 Contributions/Suggestions are always welcome!
 

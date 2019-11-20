@@ -7,7 +7,7 @@ import { INookiesProvider, IStorage, NK } from "./static";
 const NookiesContext = createContext({
   nookies: {},
   setNookie: () => {},
-  clearNookie: () => {}
+  removeNookie: () => {}
 } as IStorage);
 
 /**
@@ -35,12 +35,12 @@ const NookiesProvider = ({
     setCookie(nKey, value, maxAge, path, ctx);
   };
 
-  const clearNookie = (key: string, ctx = {}) => {
+  const removeNookie = (key: string, ctx = {}) => {
     const nKey = NK.PREFIX + key;
     let tNookies = { ...nookies };
     delete tNookies[nKey];
     setNookies(tNookies);
-    destroyCookie(ctx, nKey);
+    destroyCookie(nKey, ctx);
   };
 
   return (
@@ -48,7 +48,7 @@ const NookiesProvider = ({
       value={{
         nookies,
         setNookie,
-        clearNookie
+        removeNookie
       }}
     >
       {children}
@@ -63,7 +63,7 @@ const useNookies = () => {
 export {
   parseNookies,
   NookiesProvider,
-  destroyCookie as destroyServerNookie,
-  setCookie as setServerNookie,
+  destroyCookie as removeNookie,
+  setCookie as setNookie,
   useNookies as default
 };
