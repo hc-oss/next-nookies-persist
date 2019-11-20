@@ -1,4 +1,6 @@
 export const NK = {
+  ADDED: "nk_added",
+  REMOVED: "nk_removed",
   PREFIX: "nk_",
   PATH: "/",
   MAX_AGE: 60 * 60 * 24 * 7 // 1 Week

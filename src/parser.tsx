@@ -8,13 +8,29 @@ import { NK } from "./static";
  * @param {*} ctx
  * @returns
  */
-export const parseNookies = ctx => {
+export const parseNookies = (ctx = {}) => {
   const rawCookies = parseCookies(ctx);
   let parsedCookies = {};
   for (const [key, value] of Object.entries(rawCookies)) {
     if (key.startsWith(NK.PREFIX)) {
-      parsedCookies = { ...parsedCookies, [key]: JSON.parse(value.toString()) };
+      parsedCookies = {
+        ...parsedCookies,
+        [key.substring(NK.PREFIX.length, key.length)]: JSON.parse(
+          value.toString()
+        )
+      };
     }
   }
   return parsedCookies;
+};
+
+/**
+ * Gets cookie by name
+ *
+ * @param {string} key
+ * @param {*} [ctx={}]
+ */
+export const getNookie = (key: string, ctx: any = {}) => {
+  const nookies = parseNookies(ctx);
+  return nookies[key];
 };

@@ -1,4 +1,5 @@
 import { destroyCookie as destroy, setCookie as set } from "nookies";
+import sparkles from "sparkles";
 
 import { NK } from "./static";
 
@@ -17,11 +18,14 @@ export const setCookie = (
   maxAge: number = NK.MAX_AGE,
   path: string = NK.PATH,
   ctx: any = {}
-) =>
-  set(ctx, key, JSON.stringify(value), {
+) => {
+  const nKey = NK.PREFIX + key;
+  sparkles().emit(NK.ADDED, { [key]: value });
+  set(ctx, nKey, JSON.stringify(value), {
     maxAge,
     path
   });
+};
 
 /**
  * Removes cookie by name can be used on server side
@@ -29,4 +33,8 @@ export const setCookie = (
  * @param {string} key
  * @param {*} [ctx={}]
  */
-export const destroyCookie = (key: string, ctx: any = {}) => destroy(key, ctx);
+export const destroyCookie = (key: string, ctx: any = {}) => {
+  const nKey = NK.PREFIX + key;
+  sparkles().emit(NK.REMOVED, key);
+  destroy(ctx, nKey);
+};

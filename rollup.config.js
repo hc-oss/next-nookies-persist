@@ -25,7 +25,7 @@ export default {
   plugins: [
     external(),
     url({ exclude: ["**/*.svg"] }),
-    resolve(),
+    resolve({ preferBuiltins: true }),
     typescript({
       rollupCommonJSResolveHack: true,
       clean: true

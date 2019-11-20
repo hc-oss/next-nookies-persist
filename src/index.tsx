@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
+import sparkles from "sparkles";
 
 import { destroyCookie, setCookie } from "./cookies";
-import { parseNookies } from "./parser";
+import { getNookie, parseNookies } from "./parser";
 import { INookiesProvider, IStorage, NK } from "./static";
 
 const NookiesContext = createContext({
@@ -30,18 +31,20 @@ const NookiesProvider = ({
   const [nookies, setNookies] = useState(initialValue);
 
   const setNookie = (key: string, value: any, ctx: any = {}) => {
-    const nKey = NK.PREFIX + key;
-    setNookies({ ...nookies, [nKey]: value });
-    setCookie(nKey, value, maxAge, path, ctx);
+    setCookie(key, value, maxAge, path, ctx);
   };
 
-  const removeNookie = (key: string, ctx = {}) => {
-    const nKey = NK.PREFIX + key;
+  sparkles().on(NK.ADDED, function(evt) {
+    setNookies({ ...nookies, ...evt });
+  });
+
+  const removeNookie = destroyCookie;
+
+  sparkles().on(NK.REMOVED, function(key) {
     let tNookies = { ...nookies };
-    delete tNookies[nKey];
+    delete tNookies[key];
     setNookies(tNookies);
-    destroyCookie(nKey, ctx);
-  };
+  });
 
   return (
     <NookiesContext.Provider
@@ -62,8 +65,9 @@ const useNookies = () => {
 
 export {
   parseNookies,
-  NookiesProvider,
+  getNookie,
   destroyCookie as removeNookie,
   setCookie as setNookie,
+  NookiesProvider,
   useNookies as default
 };
