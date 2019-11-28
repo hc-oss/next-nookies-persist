@@ -2,7 +2,7 @@
 
 A simple easy to digest key-value based storage module wrapper for Next.js based on cookies that persists data on page reloads
 
-[![Edit next-nookies-persist-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/next-nookies-persist-example-l5sp2?fontsize=14&hidenavigation=1&theme=dark)
+[Example](https://next-nookies-persist-example.now.sh/)
 
 [![GitHub Actions Status](https://github.com/harshzalavadiya/next-nookies-persist/workflows/NodeJS/badge.svg)](https://github.com/harshzalavadiya/next-nookies-persist/actions)
 [![NPM](https://img.shields.io/npm/v/next-nookies-persist.svg)](https://npm.im/next-nookies-persist)
@@ -78,6 +78,8 @@ const Home = () => {
 
 export default Home;
 ```
+
+![Demo](./example.gif)
 
 ## 🤠 Credits
 
