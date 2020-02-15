@@ -20,11 +20,11 @@ export const setCookie = (
   ctx: any = {}
 ) => {
   const nKey = NK.PREFIX + key;
-  sparkles().emit(NK.ADDED, { [key]: value });
   set(ctx, nKey, JSON.stringify(value), {
     maxAge,
     path
   });
+  sparkles().emit(NK.ADDED, { [key]: value });
 };
 
 /**
@@ -35,6 +35,6 @@ export const setCookie = (
  */
 export const destroyCookie = (key: string, ctx: any = {}) => {
   const nKey = NK.PREFIX + key;
-  sparkles().emit(NK.REMOVED, key);
   destroy(ctx, nKey);
+  sparkles().emit(NK.REMOVED, key);
 };
