@@ -1,7 +1,8 @@
-import typescript from "rollup-plugin-typescript2";
+import compiler from "@ampproject/rollup-plugin-closure-compiler";
 import commonjs from "rollup-plugin-commonjs";
-import external from "rollup-plugin-peer-deps-external";
 import resolve from "rollup-plugin-node-resolve";
+import external from "rollup-plugin-peer-deps-external";
+import typescript from "rollup-plugin-typescript2";
 import url from "rollup-plugin-url";
 
 import pkg from "./package.json";
@@ -13,13 +14,13 @@ export default {
       file: pkg.main,
       format: "cjs",
       exports: "named",
-      sourcemap: true
+      sourcemap: false
     },
     {
       file: pkg.module,
       format: "es",
       exports: "named",
-      sourcemap: true
+      sourcemap: false
     }
   ],
   plugins: [
@@ -30,6 +31,7 @@ export default {
       rollupCommonJSResolveHack: true,
       clean: true
     }),
-    commonjs()
+    commonjs(),
+    compiler()
   ]
 };
