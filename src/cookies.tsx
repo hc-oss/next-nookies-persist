@@ -32,9 +32,14 @@ export const setCookie = (
  *
  * @param {string} key
  * @param {*} [ctx={}]
+ * @param {string} [path=NK.PATH]
  */
-export const destroyCookie = (key: string, ctx: any = {}) => {
+export const destroyCookie = (
+  key: string,
+  ctx: any = {},
+  path: string = NK.PATH
+) => {
   const nKey = NK.PREFIX + key;
-  destroy(ctx, nKey);
+  destroy(ctx, nKey, { path });
   sparkles().emit(NK.REMOVED, key);
 };
