@@ -5,10 +5,10 @@ import { NK } from "./static";
 /**
  * Takes next context as arguement and then returns parsed cookies
  *
- * @param {*} ctx
+ * @param {*} [ctx]
  * @returns
  */
-export const parseNookies = (ctx = {}) => {
+export const parseNookies = (ctx?) => {
   const rawCookies = parseCookies(ctx);
   let parsedCookies = {};
   for (const [key, value] of Object.entries(rawCookies)) {
@@ -28,9 +28,9 @@ export const parseNookies = (ctx = {}) => {
  * Gets cookie by name
  *
  * @param {string} key
- * @param {*} [ctx={}]
+ * @param {*} [ctx]
  */
-export const getNookie = (key: string, ctx: any = {}) => {
+export const getNookie = (key: string, ctx?: any) => {
   const nookies = parseNookies(ctx);
   return nookies[key];
 };
