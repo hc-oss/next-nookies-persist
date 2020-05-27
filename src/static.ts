@@ -3,7 +3,8 @@ export const NK = {
   REMOVED: "nk_removed",
   PREFIX: "nk_",
   PATH: "/",
-  MAX_AGE: 60 * 60 * 24 * 7 // 1 Week
+  OPTIONS: {},
+  MAX_AGE: 60 * 60 * 24 * 7, // 1 Week
 };
 
 export interface IStorage {
@@ -14,7 +15,8 @@ export interface IStorage {
 
 export interface INookiesProvider {
   children;
-  initialValue: { [key: string]: any };
+  initialValue: Record<string, any>;
+  options?: Record<string, any>;
   maxAge?: number;
   path?: string;
 }

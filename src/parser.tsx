@@ -17,7 +17,7 @@ export const parseNookies = (ctx?) => {
         ...parsedCookies,
         [key.substring(NK.PREFIX.length, key.length)]: JSON.parse(
           value.toString()
-        )
+        ),
       };
     }
   }

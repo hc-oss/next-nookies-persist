@@ -8,7 +8,7 @@ import { INookiesProvider, IStorage, NK } from "./static";
 const NookiesContext = createContext({
   nookies: {},
   setNookie: () => {},
-  removeNookie: () => {}
+  removeNookie: () => {},
 } as IStorage);
 
 /**
@@ -17,6 +17,7 @@ const NookiesContext = createContext({
  * @param {INookiesProvider} {
  *   children,
  *   initialValue,
+ *   options
  *   maxAge = NK.MAX_AGE,
  *   path = NK.PATH
  * }
@@ -25,22 +26,23 @@ const NookiesContext = createContext({
 const NookiesProvider = ({
   children,
   initialValue,
+  options = NK.OPTIONS,
   maxAge = NK.MAX_AGE,
-  path = NK.PATH
+  path = NK.PATH,
 }: INookiesProvider) => {
   const [nookies, setNookies] = useState(initialValue);
 
   const setNookie = (key: string, value: any, ctx: any = {}) => {
-    setCookie(key, value, maxAge, path, ctx);
+    setCookie(key, value, options, maxAge, path, ctx);
   };
 
-  sparkles().on(NK.ADDED, function(evt) {
+  sparkles().on(NK.ADDED, function (evt) {
     setNookies({ ...nookies, ...evt });
   });
 
   const removeNookie = destroyCookie;
 
-  sparkles().on(NK.REMOVED, function(key) {
+  sparkles().on(NK.REMOVED, function (key) {
     let tNookies = { ...nookies };
     delete tNookies[key];
     setNookies(tNookies);
@@ -51,7 +53,7 @@ const NookiesProvider = ({
       value={{
         nookies,
         setNookie,
-        removeNookie
+        removeNookie,
       }}
     >
       {children}
@@ -69,5 +71,5 @@ export {
   destroyCookie as removeNookie,
   setCookie as setNookie,
   NookiesProvider,
-  useNookies as default
+  useNookies as default,
 };

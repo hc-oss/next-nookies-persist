@@ -8,6 +8,7 @@ import { NK } from "./static";
  *
  * @param {string} key
  * @param {*} value
+ * @param {*} [options={}]
  * @param {number} maxAge
  * @param {string} path
  * @param {*} [ctx={}]
@@ -15,6 +16,7 @@ import { NK } from "./static";
 export const setCookie = (
   key: string,
   value: any,
+  options: any = NK.OPTIONS,
   maxAge: number = NK.MAX_AGE,
   path: string = NK.PATH,
   ctx: any = {}
@@ -22,7 +24,8 @@ export const setCookie = (
   const nKey = NK.PREFIX + key;
   set(ctx, nKey, JSON.stringify(value), {
     maxAge,
-    path
+    path,
+    ...options,
   });
   sparkles().emit(NK.ADDED, { [key]: value });
 };
