@@ -13,7 +13,14 @@ import { NK } from "./static";
  * @param {string} path
  * @param {*} [ctx={}]
  */
-export const setCookie = (key, value, options, maxAge, path, ctx) => {
+export const setCookie = (
+  key: string,
+  value: any,
+  options: any = NK.OPTIONS,
+  maxAge: number = NK.MAX_AGE,
+  path: string = NK.PATH,
+  ctx: any = {}
+) => {
   const nKey = NK.PREFIX + key;
   set(ctx, nKey, JSON.stringify(value), {
     maxAge,
@@ -31,7 +38,12 @@ export const setCookie = (key, value, options, maxAge, path, ctx) => {
  * @param {string} [path=NK.PATH]
  * @param {*} [options={}]
  */
-export const destroyCookie = (key, ctx, path, options) => {
+export const destroyCookie = (
+  key: string,
+  ctx: any = {},
+  path: string = NK.PATH,
+  options: any = NK.OPTIONS
+) => {
   const nKey = NK.PREFIX + key;
   destroy(ctx, nKey, { path, ...options });
   sparkles().emit(NK.REMOVED, key);
