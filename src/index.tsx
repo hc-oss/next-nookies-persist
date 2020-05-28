@@ -40,11 +40,12 @@ const NookiesProvider = ({
     setNookies({ ...nookies, ...evt });
   });
 
-  const removeNookie = destroyCookie;
+  const removeNookie = (key: string, ctx: any = {}, path: string = NK.PATH) => {
+    destroyCookie(key, ctx, path, options);
+  };
 
   sparkles().on(NK.REMOVED, function (key) {
-    let tNookies = { ...nookies };
-    delete tNookies[key];
+    const { [key]: _r, ...tNookies } = nookies;
     setNookies(tNookies);
   });
 
