@@ -11,6 +11,7 @@ export interface IStorage {
   nookies;
   setNookie;
   removeNookie;
+  options?;
 }
 
 export interface INookiesProvider {

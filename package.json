@@ -1,6 +1,6 @@
 {
   "name": "next-nookies-persist",
-  "version": "1.3.7",
+  "version": "1.3.8",
   "description": "Next.js persist cookie data with hooks",
   "author": "harshzalavadiya",
   "license": "MIT",

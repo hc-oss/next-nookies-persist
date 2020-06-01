@@ -55,6 +55,7 @@ const NookiesProvider = ({
         nookies,
         setNookie,
         removeNookie,
+        options,
       }}
     >
       {children}
