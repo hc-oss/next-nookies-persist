@@ -68,7 +68,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.1.0", "@babel/core@^7.10.1", "@babel/core@^7.4.5":
+"@babel/core@^7.1.0", "@babel/core@^7.11.6", "@babel/core@^7.4.5":
   version "7.11.6"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.11.6.tgz#3a9455dc7387ff1bac45770650bc13ba04a15651"
   integrity sha512-Wpcv03AGnmkgm6uS6k8iwhIwTrcP0m17TL1n1sy7qD0qelDu4XNeW0dN0mHfa+Gei211yDaLoEe/VlbXQzM4Bg==
@@ -1165,7 +1165,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -1655,7 +1655,7 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
-"@types/react@^16.9.35":
+"@types/react@^16.9.49":
   version "16.9.49"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.49.tgz#09db021cf8089aba0cdb12a49f8021a69cce4872"
   integrity sha512-DtLFjSj0OYAdVLBbyjhuV9CdGVHCkHn2R+xr3XkBvK2rS1Y1tkc14XSGjYgm5Fjjr90AxH9tiSzc1pCFMGO06g==
@@ -7130,7 +7130,7 @@ node-releases@^1.1.52, node-releases@^1.1.53:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.57.tgz#f6754ce225fad0611e61228df3e09232e017ea19"
   integrity sha512-ZQmnWS7adi61A9JsllJ2gdj2PauElcjnOwTp2O011iGzoakTxUsDGSe+6vD7wXbKdqhSFymC0OSx35aAMhrSdw==
 
-nookies@^2.3.0:
+nookies@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nookies/-/nookies-2.4.0.tgz#1bd4eb244f54d6e622e8ff1c7aeca692892d292d"
   integrity sha512-QC1+Ih9/BedZOIUVXneHBQgp8n9NzvsqyfmzAoUTrwOdwJOjB+phWzeLXuLqcxgxztTq3t3PeHtuosFKclL+Hw==
@@ -8709,7 +8709,7 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-scripts@^3.4.1:
+react-scripts@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.4.3.tgz#21de5eb93de41ee92cd0b85b0e1298d0bb2e6c51"
   integrity sha512-oSnoWmii/iKdeQiwaO6map1lUaZLmG0xIUyb/HwCVFLT7gNbj8JZ9RmpvMCZ4fB98ZUMRfNmp/ft8uy/xD1RLA==
@@ -9192,15 +9192,15 @@ rollup-plugin-node-resolve@^5.2.0:
     resolve "^1.11.1"
     rollup-pluginutils "^2.8.1"
 
-rollup-plugin-peer-deps-external@^2.2.2:
+rollup-plugin-peer-deps-external@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/rollup-plugin-peer-deps-external/-/rollup-plugin-peer-deps-external-2.2.3.tgz#059a8aec1eefb48a475e9fcedc3b9e3deb521213"
   integrity sha512-W6IePXTExGXVDAlfZbNUUrx3GxUOZP248u5n4a4ID1XZMrbQ+uGeNiEfapvdzwx0qZi5DNH/hDLiPUP+pzFIxg==
 
-rollup-plugin-typescript2@^0.27.1:
-  version "0.27.2"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.27.2.tgz#871a7f5d2a774f9cef50d25da868eec72acc2ed8"
-  integrity sha512-zarMH2F8oT/NO6p20gl/jkts+WxyzOlhOIUwUU/EDx5e6ewdDPS/flwLj5XFuijUCr64bZwqKuRVwCPdXXYefQ==
+rollup-plugin-typescript2@^0.27.3:
+  version "0.27.3"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.27.3.tgz#cd9455ac026d325b20c5728d2cc54a08a771b68b"
+  integrity sha512-gmYPIFmALj9D3Ga1ZbTZAKTXq1JKlTQBtj299DXhqYz9cL3g/AQfUvbb2UhH+Nf++cCq941W2Mv7UcrcgLzJJg==
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     find-cache-dir "^3.3.1"
@@ -9223,7 +9223,7 @@ rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.11.2:
+rollup@^2.28.2:
   version "2.28.2"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.28.2.tgz#599ec4978144a82d8a8ec3d37670a8440cb04e4b"
   integrity sha512-8txbsFBFLmm9Xdt4ByTOGa9Muonmc8MfNjnGAR8U8scJlF1ZW7AgNZa7aqBXaKtlvnYP/ab++fQIq9dB9NWUbg==
@@ -10334,7 +10334,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^4.0.2:
+typescript@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.3.tgz#153bbd468ef07725c1df9c77e8b453f8d36abba5"
   integrity sha512-tEu6DGxGgRJPb/mVPIZ48e69xCn2yRmCgYmDugAVwmJ6o+0u1RI18eO7E7WBTLYLaEVVOhwQmcdhQHweux/WPg==
