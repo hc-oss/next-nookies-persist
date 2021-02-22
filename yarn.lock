@@ -1166,9 +1166,9 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.11.2", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.13.tgz#0a21452352b02542db0ffb928ac2d3ca7cb6d66d"
-  integrity sha512-8+3UMPBrjFa/6TtKi/7sehPKqfAm4g6K+YQjyyFOLUTxzOngcRZTlAVY8sc2CORJYqdHQY8gRPHmn+qo15rCBw==
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.0.tgz#7f2cd0e2086626eea186a5a062e21e77ec0e45d0"
+  integrity sha512-himjPiVq1N4Eqv80uaIMdLYav1LWO51J7PwQkgp3z8N0v8cnaeP5kSgWH4hS6jvjjWAbh5tB5fVw+zuNyyQTYQ==
   dependencies:
     regenerator-runtime "^0.13.4"
 
