@@ -1,0 +1,25 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "23:30"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/react"
+    versions:
+    - 17.0.0
+    - 17.0.1
+    - 17.0.2
+    - 17.0.3
+  - dependency-name: react-scripts
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: react
+    versions:
+    - 17.0.1
+  - dependency-name: rollup-plugin-typescript2
+    versions:
+    - 0.29.0
