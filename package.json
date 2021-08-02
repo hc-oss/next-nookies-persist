@@ -35,14 +35,14 @@
     "sparkles": "^1.0.1"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
     "@babel/core": "^7.11.6",
     "@babel/runtime": "^7.11.2",
     "@types/react": "^16.9.49",
-    "react": "^16.13.1",
+    "react": "^17.0.2",
     "react-scripts": "^3.4.3",
     "rollup": "^2.28.2",
     "rollup-plugin-babel": "^4.4.0",
